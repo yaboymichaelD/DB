@@ -1,8 +1,10 @@
+using System;
+
 public class Card
 {
     public string CardNumber{get; set;}
     private string Pin{get; set;}
-    public Date ExpiryDate{get;}
+    public DateTime ExpiryDate{get;}
     public int Cvc{get;}
     public CardType type{get;}
     private int nbTries;
@@ -13,19 +15,20 @@ public class Card
 
     private const int MAXNBTRIES = 3;
 
-    public Card(string cardNumber, string pin, Date expiryDate, int cvc, CardType type)
+    public Card(string cardNumber, string pin, DateTime expiryDate, int cvc, CardType type)
     {
         this.CardNumber = cardNumber;
         this.Pin = pin;
-        this.ExpiryDate = date;
-        this.Type = type;
+        this.ExpiryDate = ExpiryDate;
+        this.type = type;
         this.nbTries = 0;
     }
 
 
     public bool PerformPinCheck(string pin)
     {
-        if(this.IsBlocked) throw new Exception("This card is blocked.");
+        if(this.IsBlocked)
+            throw new Exception("This card is blocked.");
         
         if(this.Pin == pin)
         {
@@ -34,7 +37,7 @@ public class Card
         }
         else
         {
-            (this.nbTries++);
+            this.nbTries++;
             return false;
         }
     }
