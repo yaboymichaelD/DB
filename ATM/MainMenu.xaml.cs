@@ -10,27 +10,36 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace ATM
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MainMenu.xaml
     /// </summary>
-    public partial class Login : Window
+    public partial class MainMenu : Window
     {
-        public Login()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void btnExit_Click(object sender, RoutedEventArgs e)
+        private void btnWithdraw_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnLogin_Click(object sender, RoutedEventArgs e)
+        private void btnBal_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLodge_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnLogOut_Click(object sender, RoutedEventArgs e)
         {
 
         }
