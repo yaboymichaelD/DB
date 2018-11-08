@@ -6,7 +6,7 @@ public class Card
     private string Pin{get; set;}
     public DateTime ExpiryDate{get;}
     public int Cvc{get;}
-    public CardType type{get;}
+    public CardType Type{get;}
     private int nbErrors;
     public bool IsBlocked
     {
@@ -20,7 +20,7 @@ public class Card
         this.CardNumber = cardNumber;
         this.Pin = pin;
         this.ExpiryDate = ExpiryDate;
-        this.type = type;
+        this.Type = type;
         this.nbErrors = 0;
     }
 
