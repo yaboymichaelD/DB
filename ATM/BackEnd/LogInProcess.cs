@@ -1,14 +1,14 @@
 using System;
 
-public class ATMDetails
+public class LogInProcess
 {
-    public Card card { get; private set; }
+    public Card Card { get; private set; }
 
     private bool isLogged;
 
-    public ATMDetails()
+    public LogInProcess()
     {
-        this.card = null;
+        this.Card = null;
         this.isLogged = false;
     }
 
@@ -16,23 +16,23 @@ public class ATMDetails
     {
         if (card == null)
             throw new Exception();
-        this.card = card;
+        this.Card = card;
     }
 
     public void GiveBackCard()
     {
-        this.card = null;
+        this.Card = null;
     }
 
     public bool LogIn(string pin)
     {
-        if(this.card == null)
+        if(this.Card == null)
             throw new Exception("Unable to log in because no card has been inserted.");
 
         if(!this.isLogged)
             throw new Exception("User is already logged-in");
 
-        if(this.card.PerformPinCheck(pin)) 
+        if(this.Card.CheckPin(pin)) 
         {
             this.isLogged = true;
             return true;

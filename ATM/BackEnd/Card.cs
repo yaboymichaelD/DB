@@ -7,13 +7,13 @@ public class Card
     public DateTime ExpiryDate{get;}
     public int Cvc{get;}
     public CardType type{get;}
-    private int nbTries;
+    private int nbErrors;
     public bool IsBlocked
     {
-        get{ return this.nbTries >= MAXNBTRIES; }
+        get{ return this.nbErrors >= MAXNBERRORS; }
     }
 
-    private const int MAXNBTRIES = 3;
+    private const int MAXNBERRORS = 3;
 
     public Card(string cardNumber, string pin, DateTime expiryDate, int cvc, CardType type)
     {
@@ -21,23 +21,23 @@ public class Card
         this.Pin = pin;
         this.ExpiryDate = ExpiryDate;
         this.type = type;
-        this.nbTries = 0;
+        this.nbErrors = 0;
     }
 
 
-    public bool PerformPinCheck(string pin)
+    public bool CheckPin(string pin)
     {
         if(this.IsBlocked)
             throw new Exception("This card is blocked.");
         
         if(this.Pin == pin)
         {
-            this.nbTries = 0;
+            this.nbErrors = 0;
             return true;
         }
         else
         {
-            this.nbTries++;
+            this.nbErrors++;
             return false;
         }
     }
