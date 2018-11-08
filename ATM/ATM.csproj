@@ -62,6 +62,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BackEnd\CardType.cs" />
     <Compile Include="BackEnd\LogInProcess.cs" />
     <Compile Include="BackEnd\Card.cs" />
     <Compile Include="Login.xaml.cs">
