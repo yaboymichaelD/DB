@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 
 namespace ATM
 {
+   
     /// <summary>
     /// Interaction logic for MainMenu.xaml
     /// </summary>
@@ -23,6 +24,8 @@ namespace ATM
         {
             InitializeComponent();
         }
+
+      
 
         private void btnWithdraw_Click(object sender, RoutedEventArgs e)
         {
@@ -41,7 +44,9 @@ namespace ATM
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
         {
-
+            Login newLogIn = new Login();
+            newLogIn.Show();
+            this.Close();
         }
     }
 }

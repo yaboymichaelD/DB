@@ -48,7 +48,7 @@ public class LogInProcess
         if(this.Card == null)
             throw new Exception("Unable to log in because no card has been inserted.");
 
-        if(!this.isLogged)
+        if(this.isLogged)
             throw new Exception("User is already logged-in");
 
         if(this.Card.CheckPin(pin)) 

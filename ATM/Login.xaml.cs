@@ -20,19 +20,39 @@ namespace ATM
     /// </summary>
     public partial class Login : Window
     {
+        Card myCard = new Card("1234 5678 9101", "1234", DateTime.Now.AddYears(2), 000, CardType.DEBIT);
+        
+
         public Login()
         {
             InitializeComponent();
+            
         }
 
         private void btnExit_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
+            System.Windows.Application.Current.Shutdown();
         }
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
+            //create Log In session
+            LogInProcess myLogIn = new LogInProcess();
+            myLogIn.InsertCard(myCard);
+            //myLogIn.LogIn(txtPWord.Text.ToString());
 
+            if (myLogIn.LogIn(txtPWord.Text.ToString()))
+            {
+                //If login successful allow access to main menu
+                MainMenu menu = new MainMenu();
+                menu.Show();
+                this.Close();
+            }
+            else
+                txtPWord.Text = "Wrong Pin";
         }
+
+
     }
 }
