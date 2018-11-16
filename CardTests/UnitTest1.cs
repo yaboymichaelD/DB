@@ -16,7 +16,7 @@ namespace CardTests
                 LogInProcess lg = new LogInProcess();
                 lg.InsertCard(card);            
                 bool result = lg.LogIn("1234");
-                Assert.AreEqual(true,result);
+                Assert.IsTrue(result);
         }
 
         [TestMethod]
@@ -26,7 +26,7 @@ namespace CardTests
             LogInProcess lg = new LogInProcess();
             lg.InsertCard(card);
             bool result = lg.LogIn(null);
-            Assert.AreEqual(false,result);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
@@ -36,11 +36,11 @@ namespace CardTests
             LogInProcess lg = new LogInProcess();
             lg.InsertCard(card);
             bool result = lg.LogIn("1237");
-            Assert.AreEqual(false, result);
+            Assert.IsFalse(result);
         }
 
         [TestMethod]
-        //checks if 
+        //checks if card is blocked after 3 incorrect attempts
         public void CheckPinBlocked()
         {
             LogInProcess lg = new LogInProcess();
@@ -48,8 +48,7 @@ namespace CardTests
             lg.LogIn("1");
             lg.LogIn("1");
             lg.LogIn("1");
-            Assert.AreEqual(true, card.IsBlocked); 
+            Assert.IsTrue(card.IsBlocked); 
         }
-
     }
 }
