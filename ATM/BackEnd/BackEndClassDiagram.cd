@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Card">
+    <Position X="4.25" Y="1" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>IAAEAAAAAAAAABAAAAICAAACAAAAAgAAAQAACAAAAAA=</HashCode>
+      <FileName>BackEnd\Card.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Type" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LogInProcess">
+    <Position X="11.25" Y="1" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AYBACAAAAAhAAAAAAgAAAAAAAAAAARAAAAAAAAAAAAA=</HashCode>
+      <FileName>BackEnd\LogInProcess.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Card" />
+    </ShowAsAssociation>
+  </Class>
+  <Enum Name="CardType">
+    <Position X="1.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BackEnd\CardType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
