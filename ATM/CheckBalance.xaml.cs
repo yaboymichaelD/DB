@@ -23,5 +23,15 @@ namespace ATM
         {
             InitializeComponent();
         }
+
+        private void txtBal_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void btnPrint_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
