@@ -1,4 +1,5 @@
 ﻿using System;
+using ATM;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,8 @@ namespace ATM
     /// </summary>
     public partial class Login : Window
     {
-        Card myCard = new Card("1234 5678 9101", "1234", DateTime.Now.AddYears(2), 000, CardType.DEBIT);
+        static Account acc = new Account(1001, 1000, 'C', false);
+        Card myCard = new Card("1234 5678 9101", "1234", DateTime.Now.AddYears(2), 000, CardType.DEBIT,acc);
         
 
         public Login()

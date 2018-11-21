@@ -21,8 +21,14 @@ namespace ATM
     {
         public CheckBalance()
         {
+            //this would be taken from the database
+            Account myAcc = new Account(1001, 12000, 'C', false);
+
             InitializeComponent();
+            txtBal.Text = myAcc.getBalance().ToString();
         }
+
+        
 
         private void txtBal_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -31,7 +37,9 @@ namespace ATM
 
         private void btnPrint_Click(object sender, RoutedEventArgs e)
         {
-
+            //prints receipt
+            this.Close();
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

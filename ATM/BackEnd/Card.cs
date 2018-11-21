@@ -1,3 +1,4 @@
+using ATM;
 using System;
 
 public class Card
@@ -8,6 +9,8 @@ public class Card
     public int Cvc{get;}
     public CardType Type{get;}
     private int nbErrors;
+
+    private Account Account;
     public bool IsBlocked
     {
         get{ return this.nbErrors >= MAXNBERRORS; }
@@ -15,13 +18,15 @@ public class Card
 
     private const int MAXNBERRORS = 3;
 
-    public Card(string cardNumber, string pin, DateTime expiryDate, int cvc, CardType type)
+
+    public Card(string cardNumber, string pin, DateTime expiryDate, int cvc, CardType type, Account account) 
     {
         this.CardNumber = cardNumber;
         this.Pin = pin;
         this.ExpiryDate = ExpiryDate;
         this.Type = type;
         this.nbErrors = 0;
+        this.Account = account;
     }
 
 

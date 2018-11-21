@@ -1,4 +1,5 @@
 ﻿using System;
+using ATM;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace CardTests
@@ -7,7 +8,8 @@ namespace CardTests
     public class UnitTest1
     {
         static DateTime cardExpDate = new DateTime(2020, 12, 1);
-        Card card = new Card("4127785412347856", "1234", cardExpDate, 123, CardType.DEBIT);
+        static Account acc = new Account(1001, 1000, 'C', false);
+        Card card = new Card("4127785412347856", "1234", cardExpDate, 123, CardType.DEBIT,acc);
         
         [TestMethod]
         //Checks login when Pin is correct. 
