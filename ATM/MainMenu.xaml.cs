@@ -34,7 +34,9 @@ namespace ATM
 
         private void btnBal_Click(object sender, RoutedEventArgs e)
         {
-
+            CheckBalance newChkBal = new CheckBalance();
+            newChkBal.Show();
+            this.Close();
         }
 
         private void btnLodge_Click(object sender, RoutedEventArgs e)
