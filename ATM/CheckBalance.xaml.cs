@@ -19,6 +19,9 @@ namespace ATM
     /// </summary>
     public partial class CheckBalance : Window
     {
+     
+
+
         public CheckBalance()
         {
             //this would be taken from the database
@@ -40,6 +43,13 @@ namespace ATM
             //prints receipt
             this.Close();
             System.Windows.Application.Current.Shutdown();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            var menuForm = new MainMenu();
+            menuForm.Show();
+            this.Close();
         }
     }
 }
