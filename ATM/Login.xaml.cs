@@ -45,7 +45,7 @@ namespace ATM
             myLogIn.InsertCard(myCard);
             //myLogIn.LogIn(txtPWord.Text.ToString());
 
-            if (myLogIn.LogIn(txtPWord.Text.ToString()))
+            if (myLogIn.LogIn(pwordPassword.Password.ToString()))
             {
                 //If login successful allow access to main menu
                 MainMenu menu = new MainMenu();
@@ -53,7 +53,7 @@ namespace ATM
                 this.Close();
             }
             else
-                txtPWord.Text = "Wrong Pin";
+                pwordPassword.Password = "Wrong Pin";
         }
 
         private void txtPWord_TextChanged(object sender, TextChangedEventArgs e)
