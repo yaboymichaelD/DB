@@ -3,10 +3,11 @@
   <Class Name="Card">
     <Position X="4.25" Y="1" Width="5.25" />
     <TypeIdentifier>
-      <HashCode>IAAEAAAAAAAAABAAAAICAAACAAAAAgAAAQAACAAAAAA=</HashCode>
+      <HashCode>IAAEAAAAAAAAABAAAAICAAACAAAAAgAAAQAACAAAAEA=</HashCode>
       <FileName>BackEnd\Card.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="Account" />
       <Property Name="Type" />
     </ShowAsAssociation>
   </Class>
@@ -19,6 +20,13 @@
     <ShowAsAssociation>
       <Property Name="Card" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="ATM.Account">
+    <Position X="5.5" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAgAAgAAAAAIAQAAAAAAAQICAAAAAAA=</HashCode>
+      <FileName>BackEnd\Account.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Enum Name="CardType">
     <Position X="1.5" Y="1.75" Width="1.5" />
