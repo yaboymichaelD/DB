@@ -56,6 +56,9 @@ namespace ATM
                 txtPWord.Text = "Wrong Pin";
         }
 
-       
+        private void txtPWord_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
