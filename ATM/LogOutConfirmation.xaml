@@ -1,0 +1,20 @@
+﻿<Window x:Class="ATM.LogOutConfirmation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATM"
+        mc:Ignorable="d"
+        Title="Confirm Log Out" Height="450" Width="800">
+    <Grid Margin="10,6,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Content="Yes" Grid.Column="1" HorizontalAlignment="Left" Margin="269,240,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click_1"/>
+        <Button Content="No" Grid.Column="1" HorizontalAlignment="Left" Margin="441,240,0,0" VerticalAlignment="Top" Width="75" Height="20" Click="Button_Click"/>
+        <Label Content="Do you want to log-out?" Grid.Column="1" HorizontalAlignment="Left" Margin="325,100,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+        <Label Content="A receipt will be printed " Grid.Column="1" HorizontalAlignment="Left" Margin="325,154,0,0" VerticalAlignment="Top" Height="26" Width="140"/>
+
+    </Grid>
+</Window>

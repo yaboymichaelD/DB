@@ -46,8 +46,8 @@ namespace ATM
 
         private void btnLogOut_Click(object sender, RoutedEventArgs e)
         {
-            Login newLogIn = new Login();
-            newLogIn.Show();
+            LogOutConfirmation lc = new LogOutConfirmation();
+            lc.Show(); 
             this.Close();
         }
     }
